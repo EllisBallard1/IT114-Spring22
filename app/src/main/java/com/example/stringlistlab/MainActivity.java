@@ -9,6 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -105,7 +108,15 @@ public class MainActivity extends AppCompatActivity {
     {
         // YYY: show the list in reverse order
 
-        tv.setText("Displaying the list in reverse order.");
+        int j;
+        tv.setText("Displaying the list in reverse order.\n");
+        //varaible to hold the reversed list
+
+        //reverse the order of the list items
+
+        for (j = the_list.size() - 1; j >= 0; j--) {
+            tv.append(the_list.get(j) + '\n');
+        }
 
     } // end onOption2
 
@@ -113,7 +124,10 @@ public class MainActivity extends AppCompatActivity {
     {
         // YYY: show the list size
 
-        tv.setText("Displaying the size of the list.");
+        tv.setText("Displaying the size of the list.\n");
+        //variable to hold the size of the list and showing the size to the user
+        int result = the_list.size();
+        tv.append(""+result);
 
     } // end onOption3
 
