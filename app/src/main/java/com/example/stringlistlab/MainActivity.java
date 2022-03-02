@@ -145,6 +145,10 @@ public class MainActivity extends AppCompatActivity {
 
         // YYY: Start the activity to remove an item from the list
 
+        startActivity(new Intent(this, RemoveItemActivity.class));
+
+
+
         tv.setText("Removing an item from the list.");
 
     } // end onOption5
