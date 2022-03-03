@@ -147,8 +147,6 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(this, RemoveItemActivity.class));
 
-
-
         tv.setText("Removing an item from the list.");
 
     } // end onOption5
@@ -157,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
     {
 
         // YYY: Remove all items from the list
+
+        the_list.clear();
 
         tv.setText("Removing all items from the list.");
 
